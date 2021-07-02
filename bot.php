@@ -1,14 +1,14 @@
 <?php
 date_default_timezone_set('Asia/Baghdad');
 if(!file_exists('config.json')){
-	$token = readline('1795543602:AAHKra2s5txoSpEL0OdmoKlzp-nugneCEXY: ');
-	$id = readline('1844743761: ');
+	$token = readline('ضع توكن البوت: ');
+	$id = readline('ضع ايدي التلجرام: ');
 	file_put_contents('config.json', json_encode(['id'=>$id,'token'=>$token]));
 	
 } else {
 		  $config = json_decode(file_get_contents('config.json'),1);
-	$token = $config['1795543602:AAHKra2s5txoSpEL0OdmoKlzp-nugneCEXY'];
-	$id = $config['1844743761'];
+	$token = $config['token'];
+	$id = $config['id'];
 }
 
 if(!file_exists('accounts.json')){
